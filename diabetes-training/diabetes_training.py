@@ -44,6 +44,8 @@ run.log('AUC', np.float(auc))
 
 # Save the trained model in the outputs folder
 os.makedirs('outputs', exist_ok=True)
-joblib.dump(value=model, filename='outputs/diabetes_model.pkl')
 
+testpath = '/mnt/batch/tasks/shared/LS_root/mounts/clusters/aizatcompute/code/Users/ahmadaizatr/mslearn-dp100'
+joblib.dump(value=model, filename='outputs/diabetes_model.pkl')
+print(os.listdir('outputs'))
 run.complete()
